@@ -37,8 +37,12 @@ class RestaurantDetailScreen extends StatelessWidget {
                           Flexible(
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(15),
-                              child: Image.network(
-                                'https://restaurant-api.dicoding.dev/images/small/$image',
+                              child: Hero(
+                                tag:
+                                    'https://restaurant-api.dicoding.dev/images/small/$image',
+                                child: Image.network(
+                                  'https://restaurant-api.dicoding.dev/images/small/$image',
+                                ),
                               ),
                             ),
                           ),

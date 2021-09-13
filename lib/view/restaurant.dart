@@ -100,8 +100,12 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(15),
                                       child: Center(
-                                        child: Image.network(
-                                          'https://restaurant-api.dicoding.dev/images/small/$image',
+                                        child: Hero(
+                                          tag:
+                                              'https://restaurant-api.dicoding.dev/images/small/$image',
+                                          child: Image.network(
+                                            'https://restaurant-api.dicoding.dev/images/small/$image',
+                                          ),
                                         ),
                                       ),
                                     ),
